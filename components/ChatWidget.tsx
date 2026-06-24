@@ -21,7 +21,7 @@ export default function ChatWidget() {
           
           {/* Aqui está o seu iframe */}
           <iframe 
-            src="https://app.gptmaker.ai/widget/3F52262341C8C3A1F0ADA2087A03D8E4/iframe" 
+            src="https://example.com/chat-widget" 
             width="100%" 
             style={{ height: '100%', minHeight: '420px' }}
             allow="microphone;" 

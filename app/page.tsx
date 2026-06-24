@@ -15,7 +15,7 @@ export default function Home() {
               </span>
               <div className="space-y-6">
                 <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  Crie agentes GPT Maker que vendem, atendem e escalam seu negócio.
+                  Criamos agentes que vendem, atendem e escalam seu negócio.
                 </h1>
                 <p className="max-w-xl text-lg leading-8 text-slate-400">
                   Transforme processos manuais em jornadas automáticas usando IA conversacional. Converta visitantes em leads qualificados com um site moderno e fluxos inteligentes.
@@ -42,7 +42,7 @@ export default function Home() {
                   <p className="text-sm uppercase tracking-[0.3em] text-slate-400">Diagnóstico rápido</p>
                   <h2 className="text-2xl font-bold text-white">Seu novo fluxo de vendas em minutos</h2>
                 </div>
-                <div className="rounded-3xl bg-blue-500/10 px-4 py-3 text-blue-300">GPT Maker</div>
+                <div className="rounded-3xl bg-blue-500/10 px-4 py-3 text-blue-300">Atendimento IA</div>
               </div>
               <div className="mt-8 space-y-4">
                 <div className="rounded-3xl border border-slate-700 bg-slate-950/90 p-6">
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ServiceCard
               title="Atendimento 24/7"
-              desc="Agentes GPT dedicados para responder clientes e qualificar oportunidades o tempo todo."
+              desc="Agentes dedicados para responder clientes e qualificar oportunidades o tempo todo."
             />
             <ServiceCard
               title="Automação de Vendas"
