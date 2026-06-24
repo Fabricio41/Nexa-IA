@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ChatWidget from '@/components/ChatWidget';
 import LeadForm from '@/components/LeadForm';
 import PortfolioCarousel from '@/components/PortfolioCarousel';
@@ -14,13 +15,21 @@ export default function Home() {
                 Agência de Automação com IA
               </span>
               <div className="space-y-6">
-                <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  Criamos agentes que vendem, atendem e escalam seu negócio.
-                </h1>
-                <p className="max-w-xl text-lg leading-8 text-slate-400">
-                  Transforme processos manuais em jornadas automáticas usando IA conversacional. Converta visitantes em leads qualificados com um site moderno e fluxos inteligentes.
-                </p>
+              <div className="relative h-28 w-full max-w-[360px] md:max-w-[420px]">
+                <Image
+                  src="/logo.jpeg"
+                  alt="Logo Nexa IA Solutions"
+                  fill
+                  className="object-contain"
+                />
               </div>
+              <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Criamos agentes que vendem, atendem e escalam seu negócio.
+              </h1>
+              <p className="max-w-xl text-lg leading-8 text-slate-400">
+                Transforme processos manuais em jornadas automáticas usando IA conversacional. Converta visitantes em leads qualificados com um site moderno e fluxos inteligentes.
+              </p>
+            </div>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
                   href="#contato"
