@@ -38,7 +38,7 @@ export default function PortfolioCarousel() {
         <div className="flex w-full transition-transform duration-500" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
           {portfolioItems.map((item) => (
             <div key={item.title} className="min-w-full shrink-0 px-2 sm:px-4">
-              <div className="h-full rounded-[1.75rem] border border-slate-700 bg-slate-900 p-8">
+              <div className="h-full rounded-[1.75rem] border border-slate-700 bg-slate-900 p-8 flex flex-col justify-between text-center">
                 <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
                 <p className="mt-4 text-slate-400 leading-7">{item.desc}</p>
               </div>
@@ -48,7 +48,7 @@ export default function PortfolioCarousel() {
       </div>
 
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center gap-2 overflow-x-auto sm:overflow-visible">
+        <div className="flex flex-wrap items-center justify-center gap-2 overflow-hidden sm:overflow-visible">
           {portfolioItems.map((item, index) => (
             <button
               key={item.title}
