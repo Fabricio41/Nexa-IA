@@ -1,0 +1,80 @@
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-slate-900 text-white">
+      {/* Header */}
+      <nav className="p-6 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-blue-500">Agência IA</h1>
+        <button className="bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">
+          Falar com um Especialista
+        </button>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="py-20 text-center px-4">
+        <h2 className="text-5xl font-extrabold mb-6">
+          Transforme sua empresa com <br /> 
+          <span className="text-blue-500">Inteligência Artificial</span>
+        </h2>
+        <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+          Desenvolvemos agentes de IA personalizados para automação de atendimento, vendas e gestão. Pare de perder tempo com tarefas repetitivas.
+        </p>
+        <div className="flex gap-4 justify-center">
+          <button className="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-200">
+            Ver Demonstração
+          </button>
+        </div>
+      </section>
+
+      {/* Seção de Serviços */}
+      <section className="py-20 bg-slate-800">
+        <div className="max-w-5xl mx-auto px-4">
+          <h3 className="text-3xl font-bold mb-12 text-center">Nossas Soluções</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <ServiceCard title="Atendimento 24/7" desc="Agentes que atendem seus clientes no WhatsApp a qualquer hora." />
+            <ServiceCard title="Automação de Vendas" desc="Qualificação de leads e agendamento automático no seu calendário." />
+            <ServiceCard title="Gestão Inteligente" desc="Dashboards e controle de dados integrados com IA." />
+          </div>
+        </div>
+      </section>
+
+      {/* Formulário de Captação */}
+      <section className="py-10">
+        <div className="max-w-md mx-auto bg-slate-800 p-8 rounded-2xl border border-slate-700">
+          <h3 className="text-xl font-bold mb-4 text-center">Solicite um Diagnóstico Gratuito</h3>
+          <form className="flex flex-col gap-4" onSubmit={(e) => {
+              e.preventDefault();
+              alert("Lead capturado! (Em breve conectaremos ao Firebase)");
+          }}>
+            <input 
+              type="text" 
+              placeholder="Nome da sua Empresa" 
+              className="p-3 rounded-lg bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none"
+              required
+            />
+            <input 
+              type="text" 
+              placeholder="Seu WhatsApp" 
+              className="p-3 rounded-lg bg-slate-900 border border-slate-700 focus:border-blue-500 outline-none"
+              required
+            />
+            <button 
+              type="submit" 
+              className="bg-blue-600 py-3 rounded-lg font-bold hover:bg-blue-500 transition"
+            >
+              Quero Automatizar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function ServiceCard({ title, desc }: { title: string, desc: string }) {
+  return (
+    <div className="p-8 bg-slate-900 rounded-xl border border-slate-700 hover:border-blue-500 transition">
+      <h4 className="text-xl font-bold mb-4">{title}</h4>
+      <p className="text-slate-400">{desc}</p>
+    </div>
+  );
+}
