@@ -23,7 +23,20 @@ export default function LeadForm() {
         body: JSON.stringify({ empresa, whatsapp, nome }),
       });
 
-      const result = await response.json();
+      // Tratar respostas que não sejam JSON (ex.: páginas de erro HTML)
+      const contentType = response.headers.get('content-type') || '';
+      let result: any = {};
+      if (contentType.includes('application/json')) {
+        try {
+          result = await response.json();
+        } catch (e) {
+          result = { error: 'Resposta JSON inválida do servidor' };
+        }
+      } else {
+        // fallback: ler como texto e mostrar no erro
+        const text = await response.text();
+        result = { error: text || 'Resposta não-JSON do servidor' };
+      }
 
       if (!response.ok) {
         throw new Error(result.error || 'Erro ao enviar lead');
